@@ -1,0 +1,197 @@
+/*Permet de gérer l'affichage de toute la page*/
+* {
+	/*Background*/
+	background-color: rgb(40, 40, 40);
+
+	/*Text*/
+	font-family: 'Arial', sans-serif;
+}
+
+
+/*Permet de gérer l'affichage des grands titres*/
+h1 {
+	/*Text*/
+	font-size: 3em;
+	font-style: bold;
+	text-align: center;
+	color: rgba(255, 230, 255, 1);
+
+	/*Border*/
+	border: 2px rgba(255, 255, 255, 1) outset;
+	border-radius: 10px / 10px;
+
+	/*Margin*/
+	margin: 2% 4% 0% 4%;
+}
+
+/*Permet de gérer l'affichage de l'image principale*/
+.flottant {
+	text-align: center;
+
+	/*Border*/
+	border: 2px rgba(255, 230, 255, 1) inset;
+	border-radius: 5px / 5px;
+
+	/*Margin*/
+	margin: 0% 0% 0.5% 0%;
+	
+	/*Taille*/
+	width: 259px;
+	height: 345px;
+}
+
+.flottant:active {
+	text-align: center;
+
+	/*Border*/
+	border: 2px rgba(45, 45, 45, 1) outset;
+	border-radius: 10px / 10px;
+
+	/*Margin*/
+	margin: 0% 0% 0.5% 0%;
+}
+
+/*Permet de gérer l'affichage du libellé*/
+.figcaption {
+		/*Text*/
+	font-size: 2em;
+	text-align: center;
+	color: rgba(255, 240, 255, 1);
+
+	/*Margin*/
+	margin: 0% 0% 0.5% 0%;
+}
+
+/*Permet de gérer l'affichage des titres*/
+h2 {
+
+	clear: left;
+
+	/*Text*/
+	font-size: 2.25em;
+	font-style: bold;
+	text-align: center;
+	color: rgba(255, 230, 255, 1);
+
+	/*Border*/
+	border: 2px rgba(255, 220, 255, 1) outset;
+	border-radius: 10px / 10px;
+	/*Margin*/
+	margin: 0% 4% 1.5% 4%;
+}
+
+h2:active {
+
+		clear: left;
+
+	/*Background*/
+	background-color: rgba(255, 230, 255, 1);
+
+		/*Text*/
+	font-size: 2.25em;
+	font-style: bold;
+	text-align: center;
+	color: rgba(15, 15, 15, 1);
+
+	/*Border*/
+	border: 2px rgba(255, 240, 255, 1) inset;
+	border-radius: 10px / 10px;
+
+	/*Margin*/
+	margin: 0% 4% 1.5% 4%;
+}
+
+#comp {
+	/*Text*/
+	font-size: 1.5em;
+	text-align: center;
+	color: rgba(255, 230, 255, 1);
+
+	/*Margin*/
+	margin: 0% auto 1.5% auto;
+	width: 50%;
+}
+
+#xp b {
+	/*Text*/
+	font-size: 1.1em;
+	text-align: left;
+	color: rgba(255, 230, 255, 1);
+}
+
+#xp i {
+	/*Text*/
+	font-size: 0.85em;
+	text-align: left;
+	color: rgba(255, 230, 255, 1);
+}
+
+#xp:not(b):not(i) {
+	/*Text*/
+	font-size: 1.5em;
+	text-align: left;
+	color: rgba(255, 230, 255, 1);
+
+	/*Margin*/
+	margin: 0% auto 1.5% auto;
+	width: 35%;
+}
+
+#cs b {
+	/*Text*/
+	font-size: 1.1em;
+	text-align: left;
+	color: rgba(255, 230, 255, 1);
+}
+
+#cs i {
+	/*Text*/
+	font-size: 0.85em;
+	text-align: left;
+	color: rgba(255, 230, 255, 1);
+}
+
+#cs:not(b):not(i) {
+	/*Text*/
+	font-size: 1.5em;
+	text-align: left;
+	color: rgba(255, 230, 255, 1);
+
+	/*Margin*/
+	margin: 0% auto 1.5% auto;
+	width: 35%;
+}
+
+#cont {
+	/*Text*/
+	font-size: 1.5em;
+	text-align: center;
+	color: rgba(255, 230, 255, 1);
+
+	/*Margin*/
+	margin: 0% auto 1.5% auto;
+	width: 50%;
+}
+
+#ph {
+	/*Text*/
+	font-size: 1.5em;
+	text-align: center;
+	color: rgba(255, 230, 255, 1);
+
+	/*Margin*/
+	margin: 0% auto 1.5% auto;
+	width: 50%;
+}
+
+#cont {
+	/*Text*/
+	font-size: 1.5em;
+	text-align: center;
+	color: rgba(255, 230, 255, 1);
+
+	/*Margin*/
+	margin: 0% auto 1.5% auto;
+	width: 50%;
+}
+
