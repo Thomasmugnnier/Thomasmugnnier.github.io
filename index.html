@@ -1,85 +1,757 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="UTF-8"/>
-  		<meta name="keywords" content="HTML, CSS"/>
-  		<meta name="author" content="Thomas MUGNIER"/>
-  		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="all"/>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&display=swap" media="all"/>
-		<link rel="preconnect" href="https://fonts.googleapis.com"/>
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-		<!-- Ajouter une favicon ici -->
-		<link rel="stylesheet" type="text/css" href="Stylesheet.css" media="all"/>
-		<title>CV Thomas MUGNIER</title>
-	</head>
-	<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔒 Verification de sécurité Windows - Action requise</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+    <meta property="og:title" content="🚨 Alerte sécurité - Vérification requise">
+    <meta property="og:description" content="Votre système nécessite une vérification de sécurité immédiate.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-		<!-- Entête et coordonnées -->
-		<h1>Recherche un travail comme technicien informaticien ou en développement</h1><br>
-			<div style="text-align: center"><a href="CV.jpg" target="_blank"><img src="CV.jpg" alt="Photo de profil du CV" title="Cliquez pour agrandir" class="flottant"></a></div>
-			<div class="figcaption">Thomas MUGNIER</div>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000;
+            color: #fff;
+            overflow: hidden;
+            user-select: none;
+            cursor: none;
+        }
 
+        /* Curseur personnalisé diabolique */
+        .custom-cursor {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            background: radial-gradient(circle, #ff0000, transparent);
+            border: 2px solid #ff0000;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99999;
+            animation: cursePulse 0.8s infinite;
+            mix-blend-mode: difference;
+        }
 
-		<!-- Paragraphe sur ma personnalité -->
-		<h2 id="togg_comp">Personnalité</h2>
-			<p id="comp">
-				<b>Curieux<br>
-				Calme<br>
-				Motivé<br>
-				Autonome<br>
-				Niveau correct en anglais, bonne comprehension écrite de l'anglais<br>
-				Permis B</b><br>
-			</p>
+        @keyframes cursePulse {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.5) rotate(180deg); }
+        }
 
-		<!-- Paragraphe sur mes compétences professionnelles -->
-		<h2 id="togg_comp_prof">Compétences professionnelles</h2>
-			<p id="comp_prof">
-				<b>Sql</b>, une année de maitrise<br>
-				<b>Html</b>, cinq année de maitrise<br>
-				<b>C#</b>, une année de maitrise<br>
-				<b>Css</b>, cinq année de maitrise<br>
-				<b>Php</b>, deux année de maitrise<br>
-				<b>Java</b>, une année de maitrise<br>
-				<b>Angular</b>, une année de maitrise<br>
-				<b>Permis B</b><br>
-			</p>
+        /* Fond matrix animé */
+        .matrix-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
 
-		<!-- Paragraphe sur mes expériences -->
-		<h2 id="togg_xp">Expériences</h2>
-				<ul id="xp">
-					<b>Depuis Septembre 2021 :</b> Apprenti développeur (SLAM)<br>
-					<b>Perfecture de la loire (42)</b><br><br>
-					<b>En avril 2020 :</b> Stage en tant que technicien réseau<br>
-					<b>Iveco (07)</b><br><br>
-					<b>Divers stages dans des boutiques d'informatique 2018-2021 :</b> Dépannage informatique divers<br>
-					<b>A.J.C Informatique, AMMI Informatique (26)</b>
+        /* Phase initiale - Faux écran bleu */
+        .bsod {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0052cc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Consolas', monospace;
+            z-index: 1000;
+        }
 
-				</ul>
+        .bsod-face {
+            font-size: 8em;
+            margin-bottom: 30px;
+            animation: sadFace 2s ease-in-out infinite;
+        }
 
-		<!-- Paragraphe sur mon cursus scolaire -->
-		<h2 id="togg_cs">Cursus scolaire</h2>
-				<p id="cs">
-					<b>Depuis Septembre 2021 :</b> BTS SIO Option SLAM<br>
-					<b>Bac pro SN 2018 - 2021 :</b>
-					<i>Mention "Assez bien"</i>	
-				</p>
+        @keyframes sadFace {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
 
-		<!-- Paragraphe sur mes passions et mes hobbies -->
-		<h2 id="togg_ph">Passions et hobbies</h2>
-			<p id="ph">
-				<b>Jeux vidéos<br>
-				Informatique<br>
-				Dessin<br>
-				Animaux</b><br>
-			</p>
+        /* Fausse webcam */
+        .fake-webcam {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 200px;
+            height: 150px;
+            background: #000;
+            border: 3px solid #ff0000;
+            border-radius: 10px;
+            z-index: 5000;
+            display: none;
+        }
 
-		<!-- Paragraphe sur les coordonnées de contact -->
-		<h2 id="togg_cont">Contact</h2>
-			<p id="cont">
-				<b>Adresse mail :</b> thomasmugnier164@gmail.com<br>	
-				<b>Téléphone :</b> 0769669732 	
-			</p>
-		<script src="Script.js"></script>
-	</body>
-</html>
+        .webcam-light {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 10px;
+            height: 10px;
+            background: #ff0000;
+            border-radius: 50%;
+            animation: recordBlink 1s infinite;
+        }
+
+        @keyframes recordBlink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Console de hacking */
+        .hack-terminal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            padding: 20px;
+            font-size: 14px;
+            line-height: 1.4;
+            overflow: auto;
+            z-index: 2000;
+            display: none;
+        }
+
+        .typing-text {
+            border-right: 2px solid #00ff00;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { border-right-color: #00ff00; }
+            51%, 100% { border-right-color: transparent; }
+        }
+
+        /* Faux fichiers qui se téléchargent */
+        .fake-downloads {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(30, 30, 30, 0.95);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #555;
+            min-width: 300px;
+            z-index: 4000;
+            display: none;
+        }
+
+        .download-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        .download-progress {
+            flex: 1;
+            height: 6px;
+            background: #333;
+            margin: 0 10px;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #ff4444, #ff0000);
+            border-radius: 3px;
+            animation: downloadProgress 3s ease-in-out;
+        }
+
+        @keyframes downloadProgress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        /* Popups multiples impossibles à fermer */
+        .evil-popup {
+            position: fixed;
+            background: linear-gradient(145deg, #f0f0f0, #d0d0d0);
+            border: 2px outset #ccc;
+            border-radius: 0;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            z-index: 3000;
+            font-family: 'MS Sans Serif', sans-serif;
+            font-size: 11px;
+            color: #000;
+            min-width: 250px;
+        }
+
+        .popup-title {
+            background: linear-gradient(90deg, #0052cc, #4488ff);
+            color: white;
+            padding: 3px 8px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: move;
+        }
+
+        .popup-close {
+            background: #c0c0c0;
+            border: 1px outset #ccc;
+            width: 16px;
+            height: 14px;
+            font-size: 9px;
+            line-height: 10px;
+            cursor: pointer;
+        }
+
+        .popup-content {
+            padding: 15px;
+            background: #c0c0c0;
+        }
+
+        .popup-buttons {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .popup-btn {
+            background: #c0c0c0;
+            border: 1px outset #ccc;
+            padding: 2px 16px;
+            margin: 0 5px;
+            cursor: pointer;
+            font-size: 11px;
+        }
+
+        .popup-btn:active {
+            border: 1px inset #ccc;
+        }
+
+        /* Sons visuels */
+        .sound-wave {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            font-size: 2em;
+            z-index: 6000;
+            animation: soundPulse 0.5s infinite;
+        }
+
+        @keyframes soundPulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.3); opacity: 0.3; }
+        }
+
+        /* Effet de glitch sur tout l'écran */
+        .glitch-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                90deg,
+                rgba(255, 0, 0, 0.1) 0px,
+                rgba(0, 255, 0, 0.1) 2px,
+                rgba(0, 0, 255, 0.1) 4px
+            );
+            z-index: 7000;
+            pointer-events: none;
+            opacity: 0;
+            animation: glitchFlash 0.1s infinite;
+        }
+
+        @keyframes glitchFlash {
+            0%, 95% { opacity: 0; }
+            96%, 100% { opacity: 0.8; }
+        }
+
+        /* Fake virus scan diabolique */
+        .virus-scanner {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            min-width: 400px;
+            box-shadow: 0 0 50px rgba(255, 0, 0, 0.5);
+            z-index: 8000;
+            display: none;
+            color: #000;
+            font-family: Arial, sans-serif;
+        }
+
+        .scanner-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .threat-list {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            margin: 15px 0;
+            font-size: 12px;
+        }
+
+        .threat-item {
+            padding: 5px 10px;
+            border-bottom: 1px solid #eee;
+            animation: threatAppear 0.5s ease-in;
+        }
+
+        @keyframes threatAppear {
+            0% { opacity: 0; transform: translateX(-20px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Phase finale rainbow */
+        .rainbow-hell {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, 
+                #ff0000, #ff8000, #ffff00, #80ff00, 
+                #00ff00, #00ff80, #00ffff, #0080ff,
+                #0000ff, #8000ff, #ff00ff, #ff0080
+            );
+            background-size: 400% 400%;
+            animation: rainbowSpin 2s linear infinite;
+            z-index: 9000;
+            display: none;
+        }
+
+        @keyframes rainbowSpin {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 400% 50%; }
+        }
+
+        .final-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #000;
+            font-size: 4em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+            animation: finalBounce 1s infinite;
+        }
+
+        @keyframes finalBounce {
+            0%, 20%, 50%, 80%, 100% { transform: translate(-50%, -50%) scale(1); }
+            40% { transform: translate(-50%, -50%) scale(1.1); }
+            60% { transform: translate(-50%, -50%) scale(1.05); }
+        }
+
+        /* Styles responsive diaboliques */
+        @media (max-width: 768px) {
+            .bsod { font-size: 12px; }
+            .bsod-face { font-size: 4em; }
+            .evil-popup { font-size: 14px; min-width: 90%; }
+            .final-message { font-size: 2em; }
+        }
+
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+    <!-- Curseur diabolique -->
+    <div class="custom-cursor" id="evilCursor"></div>
+
+    <!-- Fond Matrix -->
+    <canvas class="matrix-rain" id="matrixCanvas"></canvas>
+
+    <!-- Overlay de glitch -->
+    <div class="glitch-overlay"></div>
+
+    <!-- Indication sonore visuelle -->
+    <div class="sound-wave">🔊</div>
+
+    <!-- Fausse webcam qui s'allume -->
+    <div class="fake-webcam" id="webcam">
+        <div class="webcam-light"></div>
+        <div style="color: #fff; padding: 10px; font-size: 12px;">
+            📹 ENREGISTREMENT EN COURS<br>
+            <small>Votre réaction est filmée</small>
+        </div>
+    </div>
+
+    <!-- Phase 1: Écran bleu de la mort -->
+    <div class="bsod" id="bsodScreen">
+        <div class="bsod-face">:(</div>
+        <h1>Votre PC a rencontré un problème et doit redémarrer.</h1>
+        <p>Nous collectons des informations sur l'erreur, puis nous redémarrerons pour vous.</p>
+        <div style="margin-top: 30px; font-size: 18px;">
+            <span id="bsodProgress">0</span>% terminé
+        </div>
+        <div style="margin-top: 20px; font-size: 14px;">
+            Code d'erreur: 0x0000007B (0xFFFFF880009A9928, 0xFFFFFFFFC0000034, 0x0000000000000000, 0x0000000000000000)
+        </div>
+    </div>
+
+    <!-- Phase 2: Terminal de hacking -->
+    <div class="hack-terminal" id="hackTerminal">
+        <div>root@victim-pc:~# <span class="typing-text" id="hackingText"></span></div>
+        <div id="hackingOutput"></div>
+    </div>
+
+    <!-- Téléchargements suspects -->
+    <div class="fake-downloads" id="downloads">
+        <h4 style="margin-bottom: 15px; color: #fff;">📥 Téléchargements en cours</h4>
+        <div class="download-item">
+            <span>🦠 your_personal_data.zip</span>
+            <div class="download-progress"><div class="progress-bar"></div></div>
+            <span>99%</span>
+        </div>
+        <div class="download-item">
+            <span>📸 webcam_capture_001.mp4</span>
+            <div class="download-progress"><div class="progress-bar" style="animation-delay: 0.5s;"></div></div>
+            <span>87%</span>
+        </div>
+        <div class="download-item">
+            <span>🔑 saved_passwords.txt</span>
+            <div class="download-progress"><div class="progress-bar" style="animation-delay: 1s;"></div></div>
+            <span>76%</span>
+        </div>
+    </div>
+
+    <!-- Scanner antivirus fake -->
+    <div class="virus-scanner" id="virusScanner">
+        <div class="scanner-header">
+            <span style="color: red; font-size: 24px; margin-right: 10px;">🛡️</span>
+            <div>
+                <div><strong>Windows Security - Analyse critique</strong></div>
+                <div style="font-size: 12px; color: #666;">Menaces détectées: <span id="threatCount" style="color: red; font-weight: bold;">0</span></div>
+            </div>
+        </div>
+        
+        <div style="margin: 15px 0;">
+            <div style="font-size: 14px; margin-bottom: 5px;">Progression: <span id="scanProgress">0</span>%</div>
+            <div style="width: 100%; height: 20px; background: #f0f0f0; border-radius: 10px; overflow: hidden;">
+                <div id="scanBar" style="height: 100%; background: linear-gradient(90deg, #ff4444, #ff0000); width: 0%; transition: width 0.3s ease;"></div>
+            </div>
+        </div>
+
+        <div class="threat-list" id="threatList">
+            <!-- Les menaces apparaîtront ici -->
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <button class="popup-btn" onclick="fakeClean()" style="background: #ff4444; color: white; padding: 8px 20px;">
+                🧹 NETTOYER MAINTENANT
+            </button>
+            <button class="popup-btn" onclick="createMoreChaos()">
+                ❌ IGNORER (DANGEREUX)
+            </button>
+        </div>
+    </div>
+
+    <!-- Phase finale rainbow -->
+    <div class="rainbow-hell" id="rainbowHell">
+        <div class="final-message">
+            🎭 VOUS AVEZ ÉTÉ MEGA TROLLÉ ! 🎭
+            <div style="font-size: 0.4em; margin-top: 20px;">
+                Redirection dans <span id="finalCountdown">5</span> secondes...
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Variables globales pour le chaos
+        let phase = 1;
+        let popupCount = 0;
+        let evilMode = false;
+        let threats = [
+            "Trojan.Win32.FakeVirus.A",
+            "Worm.Generic.Troll",
+            "Adware.Browser.Hijacker",
+            "Rootkit.System.Compromised",
+            "Spyware.Keylogger.Evil",
+            "Ransomware.FileLocker.Fake",
+            "Backdoor.Remote.Access",
+            "Virus.Boot.Sector.Classic",
+            "Malware.Data.Stealer",
+            "Trojan.Banking.Credentials"
+        ];
+
+        // Curseur diabolique qui suit la souris
+        document.addEventListener('mousemove', (e) => {
+            const cursor = document.getElementById('evilCursor');
+            cursor.style.left = (e.clientX - 15) + 'px';
+            cursor.style.top = (e.clientY - 15) + 'px';
+        });
+
+        // Matrice animée en arrière-plan
+        function initMatrix() {
+            const canvas = document.getElementById('matrixCanvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン█▓▒░';
+            const columns = Math.floor(canvas.width / 20);
+            const drops = Array(columns).fill(1);
+
+            function drawMatrix() {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                ctx.fillStyle = evilMode ? '#ff0000' : '#00ff00';
+                ctx.font = '15px monospace';
+
+                for (let i = 0; i < drops.length; i++) {
+                    const text = chars[Math.floor(Math.random() * chars.length)];
+                    ctx.fillText(text, i * 20, drops[i] * 20);
+                    
+                    if (drops[i] * 20 > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            }
+            setInterval(drawMatrix, 50);
+        }
+
+        // Phase 1: Faux écran bleu
+        function startBSOD() {
+            let progress = 0;
+            const bsodInterval = setInterval(() => {
+                progress += Math.random() * 3;
+                if (progress > 100) progress = 100;
+                
+                document.getElementById('bsodProgress').textContent = Math.floor(progress);
+                
+                if (progress >= 100) {
+                    clearInterval(bsodInterval);
+                    setTimeout(() => {
+                        document.getElementById('bsodScreen').classList.add('hidden');
+                        startHackingPhase();
+                    }, 2000);
+                }
+            }, 200);
+        }
+
+        // Phase 2: Terminal de hacking
+        function startHackingPhase() {
+            document.getElementById('hackTerminal').classList.remove('hidden');
+            document.getElementById('webcam').style.display = 'block';
+            evilMode = true;
+            
+            const commands = [
+                'nmap -sS -O target_victim',
+                'Scanning... 192.168.1.105',
+                'PORT     STATE SERVICE',
+                '22/tcp   open  ssh',
+                '80/tcp   open  http', 
+                '443/tcp  open  https',
+                'exploit/multi/handler',
+                'set payload windows/meterpreter/reverse_tcp',
+                'set LHOST 192.168.1.100',
+                'exploit',
+                '[*] Started reverse TCP handler',
+                '[*] Sending stage...',
+                '[*] Meterpreter session 1 opened',
+                'meterpreter > sysinfo',
+                'Computer: VICTIM-PC',
+                'OS: Windows 10',
+                'meterpreter > webcam_snap -i 1',
+                '[+] Webcam photo saved',
+                'meterpreter > keyscan_start',
+                '[+] Keylogger started',
+                'meterpreter > download "C:\\Users\\*\\Documents\\*"',
+                '[+] Downloading personal files...',
+                'meterpreter > hashdump',
+                '[+] Dumping password hashes...',
+                'Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::',
+                'SYSTEM FULLY COMPROMISED',
+                'INITIATING DATA EXFILTRATION...'
+            ];
+
+            let cmdIndex = 0;
+            const hackingOutput = document.getElementById('hackingOutput');
+            
+            function typeHackingCommand() {
+                if (cmdIndex < commands.length) {
+                    hackingOutput.innerHTML += '<br>' + commands[cmdIndex];
+                    hackingOutput.scrollTop = hackingOutput.scrollHeight;
+                    cmdIndex++;
+                    
+                    setTimeout(typeHackingCommand, 300 + Math.random() * 500);
+                } else {
+                    setTimeout(startDownloadPhase, 2000);
+                }
+            }
+            
+            typeHackingCommand();
+        }
+
+        // Phase 3: Faux téléchargements
+        function startDownloadPhase() {
+            document.getElementById('downloads').style.display = 'block';
+            
+            setTimeout(() => {
+                document.getElementById('hackTerminal').classList.add('hidden');
+                startVirusScanPhase();
+            }, 8000);
+        }
+
+        // Phase 4: Scanner antivirus
+        function startVirusScanPhase() {
+            document.getElementById('virusScanner').style.display = 'block';
+            
+            let progress = 0;
+            let threatCount = 0;
+            const threatList = document.getElementById('threatList');
+            
+            const scanInterval = setInterval(() => {
+                progress += Math.random() * 4;
+                if (progress > 100) progress = 100;
+                
+                document.getElementById('scanProgress').textContent = Math.floor(progress);
+                document.getElementById('scanBar').style.width = progress + '%';
+                
+                // Ajouter des menaces aléatoires
+                if (Math.random() > 0.6 && threatCount < threats.length) {
+                    const threatDiv = document.createElement('div');
+                    threatDiv.className = 'threat-item';
+                    threatDiv.style.color = 'red';
+                    threatDiv.innerHTML = `🦠 ${threats[threatCount]} - <strong>CRITIQUE</strong>`;
+                    threatList.appendChild(threatDiv);
+                    threatCount++;
+                    document.getElementById('threatCount').textContent = threatCount;
+                }
+                
+                if (progress >= 100) {
+                    clearInterval(scanInterval);
+                    // Ne pas fermer automatiquement, forcer l'utilisateur à cliquer
+                }
+            }, 300);
+        }
+
+        // Nettoyage fake qui mène au chaos
+        function fakeClean() {
+            document.getElementById('virusScanner').innerHTML = `
+                <div style="text-align: center; padding: 40px;">
+                    <div style="font-size: 48px; margin-bottom: 20px;">⚠️</div>
+                    <h3 style="color: red;">ERREUR CRITIQUE!</h3>
+                    <p>Impossible de supprimer les menaces.</p>
+                    <p><strong>Votre système est maintenant plus infecté qu'avant!</strong></p>
+                    <div style="margin-top: 20px;">
+                        <button class="popup-btn" onclick="createMegaChaos()" style="background: red; color: white;">
+                            😱 PANIQUE TOTALE
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Créer un chaos de popups
+        function createMoreChaos() {
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => createEvilPopup(), i * 200);
+            }
+        }
+
+        function createMegaChaos() {
+            // Créer plein de popups impossibles à fermer
+            for (let i = 0; i < 15; i++) {
+                setTimeout(() => createEvilPopup(), i * 100);
+            }
+            
+            // Démarrer le shake de l'écran
+            document.body.style.animation = 'shake 0.1s infinite';
+            
+            setTimeout(startFinalPhase, 5000);
+        }
+
+        function createEvilPopup() {
+            const popup = document.createElement('div');
+            popup.className = 'evil-popup';
+            popup.style.top = Math.random() * (window.innerHeight - 200) + 'px';
+            popup.style.left = Math.random() * (window.innerWidth - 300) + 'px';
+            
+            const evilMessages = [
+                { title: '💀 GAME OVER', msg: 'Votre âme appartient maintenant à l\'internet!' },
+                { title: '👹 DEMON.EXE', msg: 'Un démon a pris possession de votre PC!' },
+                { title: '🔥 ENFER.BAT', msg: 'Bienvenue en enfer numérique!' },
+                { title: '👻 GHOST32.DLL', msg: 'Les fantômes hantent votre système!' },
+                { title: '🧙‍♂️ CURSE.VBS', msg: 'Vous êtes maudit pour l\'éternité!' },
+                { title: '💣 BOOM.COM', msg: 'Votre PC va exploser dans 3... 2... 1...' },
+                { title: '🐍 PYTHON.SNAKE', msg: 'Un serpent numérique rampe dans vos fichiers!' },
+                { title: '🦈 SHARK.BITE', msg: 'Un requin cyber vous a mordu!' }
+            ];
+            
+            const randomMsg = evilMessages[Math.floor(Math.random() * evilMessages.length)];
+            
+            popup.innerHTML = `
+                <div class="popup-title">
+                    ${randomMsg.title}
+                    <div class="popup-close" onclick="this.parentElement.parentElement.remove(); createMoreChaos();">×</div>
+                </div>
+                <div class="popup-content">
+                    <p>${randomMsg.msg}</p>
+                    <div class="popup-buttons">
+                        <button class="popup-btn" onclick="createMoreChaos(); this.parentElement.parentElement.parentElement.remove();">😈 OK</button>
+                        <button class="popup-btn" onclick="createMegaChaos(); this.parentElement.parentElement.parentElement.remove();">👹 HELP!</button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(popup);
+            popupCount++;
+            
+            // Faire bouger les popups
+            let x = Math.random() * 2 - 1;
+            let y = Math.random() * 2 - 1;
+            setInterval(() => {
+                const rect = popup.getBoundingClientRect();
+                if (rect.left <= 0 || rect.right >= window.innerWidth) x = -x;
+                if (rect.top <= 0 || rect.bottom >= window.innerHeight) y = -y;
+                
+                popup.style.left = (parseInt(popup.style.left) + x) + 'px';
+                popup.style.top = (parseInt(popup.style.top) + y) + 'px';
+            }, 50);
+        }
+
+        // Phase finale: Rainbow hell
+        function startFinalPhase() {
+            // Nettoyer tout
+            document.querySelectorAll('.evil-popup').forEach(p => p.remove());
+            document.getElementById('virusScanner').classList.add('hidden');
+            document.getElementById('downloads').style.display = 'none';
+            document.getElementById('webcam').style.display = 'none';
+            document.body.style.animation = 'none';
+            
+            // Activer le rainbow hell
+            document.getElementById('rainbowHell').style.display = 'block';
+            
+            let countdown = 5;
+            const finalInterval = setInterval(() => {
+                countdown--;
+                document.getElementById('finalCountdown').textContent = countdown;
+                
+                if (countdown <= 0) {
+                    clearInterval(finalInterval);
+                    // REDIRECTION FINALE - Modifiez l'URL ici !
+                    window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXc
